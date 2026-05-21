@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - FitZone Premium</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+<div class="app-container">
+    <!-- SIDEBAR -->
+    <aside class="sidebar fade-in">
+        <div class="logo">
+            <i class="ph-fill ph-barbell"></i>
+            <h1>FitZone</h1>
+        </div>
+
+        <nav class="nav-menu">
+            <a href="dashboard.html" class="nav-item active"><i class="ph ph-squares-four"></i>Dashboard</a>
+            <a href="index.html" class="nav-item"><i class="ph ph-house"></i>Home</a>
+            <a href="workouts.html" class="nav-item"><i class="ph ph-activity"></i>Workouts</a>
+            <a href="diet.html" class="nav-item"><i class="ph ph-apple"></i>Diet</a>
+            <a href="contact.html" class="nav-item"><i class="ph ph-envelope"></i>Contact</a>
+        </nav>
+
+        <div class="profile-section">
+            <div class="profile-avatar"><i class="ph-fill ph-user"></i></div>
+            <div class="profile-info">
+                <p class="profile-name">King</p>
+                <p class="profile-status">Premium Member</p>
+            </div>
+        </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        
+        <!-- TOP BAR -->
+        <header class="topbar glass-panel fade-in delay-100">
+            <div class="topbar-left">
+                <button class="icon-btn mobile-menu-btn" aria-label="Toggle Sidebar"><i class="ph ph-list"></i></button>
+                <div>
+                    <h2 class="greeting" id="greeting">Welcome back, King</h2>
+                    <p class="current-date" id="currentDate"></p>
+                </div>
+            </div>
+
+            <div class="topbar-right">
+                <button class="focus-mode-btn" id="openFocusBtn"><i class="ph-fill ph-headphones"></i> Focus</button>
+                <button class="icon-btn theme-toggle" id="themeToggle" aria-label="Toggle Theme"><i class="ph ph-moon"></i></button>
+                <button class="logout-btn" id="logoutBtn"><i class="ph ph-sign-out"></i>Logout</button>
+            </div>
+        </header>
+
+        <!-- HERO SECTION -->
+        <section class="hero glass-panel slide-up delay-200">
+            <div class="hero-content">
+                <span class="hero-badge">Pro Plan Active</span>
+                <h1 class="hero-title">Train Hard.<br>Stay Consistent.</h1>
+                <p class="hero-subtitle">Push your limits and build a stronger version of yourself every single day.</p>
+                <button class="hero-btn">Start Today's Workout <i class="ph ph-arrow-right"></i></button>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat-card">
+                    <span class="stat-number" id="heroCals">0</span>
+                    <span class="stat-label">Calories</span>
+                </div>
+                <div class="hero-stat-card">
+                    <span class="stat-number" id="heroStreak">0</span>
+                    <span class="stat-label">Streak Days</span>
+                </div>
+                <div class="hero-stat-card">
+                    <span class="stat-number" id="heroBMI">0</span>
+                    <span class="stat-label">Current BMI</span>
+                </div>
+                <div class="hero-stat-card">
+                    <span class="stat-number" id="heroWeight">0</span>
+                    <span class="stat-label">Weight (kg)</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- STATS SECTION -->
+        <section class="stats-section slide-up delay-300">
+            <div class="stat-card glass-panel">
+                <div class="stat-header">
+                    <div class="stat-icon-wrapper">
+                        <i class="ph-fill ph-fire"></i>
+                    </div>
+                    <span class="stat-change positive"><i class="ph ph-trend-up"></i> 12%</span>
+                </div>
+                <p class="stat-label">Calories Burned</p>
+                <h3 class="stat-value" id="statCals">0</h3>
+                <div class="stat-progress-bar"><div class="progress-fill" id="calsProgress" style="width: 0%"></div></div>
+            </div>
+
+            <div class="stat-card glass-panel">
+                <div class="stat-header">
+                    <div class="stat-icon-wrapper">
+                        <i class="ph-fill ph-timer"></i>
+                    </div>
+                    <span class="stat-change positive"><i class="ph ph-trend-up"></i> 8%</span>
+                </div>
+                <p class="stat-label">Workout Time</p>
+                <h3 class="stat-value" id="statTime">0 min</h3>
+                <div class="stat-progress-bar"><div class="progress-fill" id="timeProgress" style="width: 0%"></div></div>
+            </div>
+
+            <div class="stat-card glass-panel" id="waterCard">
+                <div class="stat-header">
+                    <div class="stat-icon-wrapper">
+                        <i class="ph-fill ph-drop"></i>
+                    </div>
+                    <button class="add-stat-btn" id="addWaterBtn" aria-label="Add Water"><i class="ph ph-plus"></i> Add</button>
+                </div>
+                <p class="stat-label">Water Intake</p>
+                <h3 class="stat-value" id="statWater">0</h3>
+                <div class="stat-progress-bar"><div class="progress-fill" id="waterProgress" style="width: 0%"></div></div>
+            </div>
+
+            <div class="stat-card glass-panel">
+                <div class="stat-header">
+                    <div class="stat-icon-wrapper">
+                        <i class="ph-fill ph-lightning"></i>
+                    </div>
+                    <span class="stat-change positive"><i class="ph ph-trend-up"></i> 3%</span>
+                </div>
+                <p class="stat-label">Streak Days</p>
+                <h3 class="stat-value" id="statStreak">0</h3>
+                <div class="stat-progress-bar"><div class="progress-fill" id="streakProgress" style="width: 0%"></div></div>
+            </div>
+        </section>
+
+        <div class="main-grid slide-up delay-400">
+            <!-- PROGRESS SECTION -->
+            <section class="progress-card glass-panel">
+                <div class="card-header">
+                    <h2>Weekly Progress</h2>
+                    <div class="chart-filters">
+                        <button class="filter-btn active">Week</button>
+                        <button class="filter-btn">Month</button>
+                    </div>
+                </div>
+                <div class="chart-wrapper">
+                    <canvas id="progressChart" class="progress-chart"></canvas>
+                </div>
+            </section>
+
+            <!-- WORKOUT SECTION -->
+            <section class="workout-section glass-panel">
+                <div class="card-header">
+                    <h2>Today's Routine</h2>
+                    <a href="workouts.html" class="view-all-link">View All <i class="ph ph-caret-right"></i></a>
+                </div>
+                <div class="workout-list">
+                    <div class="workout-item">
+                        <div class="workout-icon-box"><i class="ph ph-barbell"></i></div>
+                        <div class="workout-info">
+                            <h3>Bench Press</h3>
+                            <p>3 sets × 8 reps</p>
+                        </div>
+                        <button class="workout-btn">Start</button>
+                    </div>
+
+                    <div class="workout-item">
+                        <div class="workout-icon-box"><i class="ph ph-person-simple-walk"></i></div>
+                        <div class="workout-info">
+                            <h3>Squats</h3>
+                            <p>4 sets × 10 reps</p>
+                        </div>
+                        <button class="workout-btn">Start</button>
+                    </div>
+
+                    <div class="workout-item">
+                        <div class="workout-icon-box"><i class="ph ph-arm-flex"></i></div>
+                        <div class="workout-info">
+                            <h3>Pull Ups</h3>
+                            <p>3 sets × 12 reps</p>
+                        </div>
+                        <button class="workout-btn">Start</button>
+                    </div>
+
+                    <div class="workout-item">
+                        <div class="workout-icon-box"><i class="ph ph-person-simple-run"></i></div>
+                        <div class="workout-info">
+                            <h3>Treadmill</h3>
+                            <p>15 mins cardio</p>
+                        </div>
+                        <button class="workout-btn">Start</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- WATER & MOTIVATION -->
+        <div class="bottom-section fade-in delay-400">
+            <!-- WATER TRACKER -->
+            <section class="water-tracker glass-panel">
+                <h2>Hydration</h2>
+                <div class="water-tracker-content">
+                    <div class="water-ring">
+                        <svg viewBox="0 0 120 120">
+                            <circle cx="60" cy="60" r="50" class="ring-bg"></circle>
+                            <circle cx="60" cy="60" r="50" class="ring-fill" id="waterRing"></circle>
+                        </svg>
+                        <div class="ring-text">
+                            <i class="ph-fill ph-drop" style="color: var(--accent); margin-bottom: 4px;"></i>
+                            <div><span class="ring-value" id="waterValue">0</span><span class="ring-unit">/8</span></div>
+                        </div>
+                    </div>
+                    <div class="water-controls">
+                        <button class="glass-btn btn-add" id="addWater"><i class="ph ph-plus"></i> Add Glass</button>
+                        <button class="glass-btn btn-reset" id="resetWater"><i class="ph ph-arrow-counter-clockwise"></i> Reset</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- MOTIVATION -->
+            <section class="motivation-card glass-panel">
+                <div class="quote-icon"><i class="ph-fill ph-quotes"></i></div>
+                <p class="quote-text" id="quoteText">"Consistency creates transformation."</p>
+                <p class="quote-author" id="quoteAuthor">— Fitness Wisdom</p>
+                <button class="glass-btn quote-btn" id="newQuote"><i class="ph ph-arrows-clockwise"></i> Inspire Me</button>
+            </section>
+        </div>
+
+        <!-- ================= FOCUS MODE OVERLAY ================= -->
+        <div class="focus-overlay" id="focusOverlay">
+            <button class="close-focus-btn" id="closeFocusBtn"><i class="ph ph-x"></i></button>
+            
+            <div class="focus-panel glass-panel">
+                <h2><i class="ph-fill ph-headphones"></i> Zen Focus Mode</h2>
+                <p class="focus-subtitle">Immerse yourself. No distractions. Just gains.</p>
+                
+                <div class="focus-content">
+                    <!-- Spotify Player -->
+                    <div class="spotify-container">
+                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DX76Wlfdnj7AP?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                    </div>
+
+                    <!-- Focus Timer -->
+                    <div class="focus-timer-container">
+                        <div class="timer-ring">
+                            <svg class="progress-ring" width="200" height="200">
+                                <circle class="progress-ring-circle-bg" stroke="rgba(255,255,255,0.1)" stroke-width="8" fill="transparent" r="90" cx="100" cy="100"/>
+                                <circle class="progress-ring-circle" id="focusTimerCircle" stroke="var(--accent-vibrant-2)" stroke-width="8" fill="transparent" r="90" cx="100" cy="100"/>
+                            </svg>
+                            <div class="timer-display">
+                                <span id="focusTimeDisplay">45:00</span>
+                            </div>
+                        </div>
+                        <div class="focus-controls">
+                            <button id="focusStartBtn" class="focus-btn primary"><i class="ph-fill ph-play"></i></button>
+                            <button id="focusPauseBtn" class="focus-btn"><i class="ph-fill ph-pause"></i></button>
+                            <button id="focusResetBtn" class="focus-btn"><i class="ph ph-arrow-counter-clockwise"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/db.js"></script>
+<script src="js/dashboard.js"></script>
+<script src="js/global.js"></script>
+
+</body>
+</html>

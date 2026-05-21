@@ -1,0 +1,334 @@
+/* ================= WORKOUT PAGE STYLES ================= */
+
+/* ================= HEADER ================= */
+.header {
+    text-align: center;
+    padding: 80px 8% 40px;
+}
+
+.header h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.header p {
+    color: var(--text-secondary);
+    font-size: 18px;
+}
+
+/* ================= CATEGORY ================= */
+.categories {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    padding: 0 8%;
+}
+
+.category-btn {
+    padding: 12px 25px;
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    background: var(--bg-glass);
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 600;
+    font-size: 14px;
+    backdrop-filter: blur(10px);
+}
+
+.category-btn:hover,
+.category-btn.active {
+    background: var(--text-primary);
+    color: var(--bg-base);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+}
+
+/* ================= WORKOUT GRID ================= */
+.workout-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 0 8% 80px;
+}
+
+.workout-card {
+    background: var(--bg-glass-heavy);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: var(--transition);
+    border: 1px solid var(--border-light);
+    backdrop-filter: blur(12px);
+    box-shadow: var(--shadow-soft);
+}
+
+.workout-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent-vibrant-2);
+    box-shadow: 0 15px 35px rgba(255, 255, 255, 0.05);
+}
+
+.workout-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    filter: grayscale(40%);
+    transition: var(--transition);
+}
+
+.workout-card:hover img {
+    filter: grayscale(0%);
+}
+
+.workout-content {
+    padding: 25px;
+}
+
+.workout-content h3 {
+    margin-bottom: 10px;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.workout-content p {
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.badge {
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: var(--radius-sm);
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+    font-size: 13px;
+    font-weight: 500;
+    border: 1px solid var(--border-light);
+}
+
+/* ================= TIMER ================= */
+.timer-section {
+    padding: 50px 8% 100px;
+}
+
+.timer-card {
+    max-width: 500px;
+    margin: auto;
+    background: var(--bg-glass-heavy);
+    padding: 40px 30px;
+    border-radius: var(--radius-lg);
+    text-align: center;
+    border: 1px solid var(--border-light);
+    box-shadow: var(--shadow-soft);
+    backdrop-filter: blur(15px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.timer-card h2 {
+    color: var(--text-secondary);
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Presets Styling */
+.timer-presets {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.preset-btn {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-light);
+    color: var(--text-secondary);
+    padding: 6px 14px;
+    border-radius: var(--radius-sm);
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.preset-btn:hover, .preset-btn.active {
+    background: var(--accent-vibrant-2);
+    border-color: var(--accent-vibrant-2);
+    color: var(--bg-base);
+    box-shadow: 0 4px 15px rgba(203, 213, 225, 0.2);
+}
+
+/* Radial SVG progress container */
+.timer-display-wrapper {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    margin: 10px 0;
+}
+
+.timer-svg {
+    transform: rotate(-90deg);
+}
+
+.timer-circle-progress {
+    transition: stroke-dashoffset 0.1s linear, stroke 0.3s ease;
+}
+
+.timer-text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.timer-phase {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--accent-vibrant-2);
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    text-shadow: 0 0 10px rgba(203, 213, 225, 0.3);
+}
+
+.timer-card h1 {
+    font-size: 56px;
+    margin: 0;
+    color: var(--text-primary);
+    font-variant-numeric: tabular-nums;
+    font-weight: 700;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+}
+
+/* Custom Adjustment buttons underneath time */
+.timer-adjust {
+    display: flex;
+    gap: 15px;
+    margin-top: 8px;
+}
+
+.timer-adjust button {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid var(--border-light);
+    color: var(--text-primary);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.timer-adjust button:hover {
+    background: var(--text-primary);
+    color: var(--bg-base);
+    transform: scale(1.1);
+}
+
+/* Control buttons style */
+.timer-buttons {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+    justify-content: center;
+}
+
+.timer-ctrl-btn {
+    padding: 10px 20px;
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-primary);
+    transition: var(--transition);
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.timer-ctrl-btn:hover {
+    transform: translateY(-2px);
+    background: var(--text-primary);
+    color: var(--bg-base);
+}
+
+.timer-ctrl-btn.primary {
+    background: var(--accent-vibrant-2);
+    border-color: var(--accent-vibrant-2);
+    color: var(--bg-base);
+}
+
+.timer-ctrl-btn.primary:hover {
+    background: var(--text-primary);
+    border-color: var(--text-primary);
+}
+
+/* Sound toggle pill */
+.timer-sound-toggle {
+    margin-top: 5px;
+}
+
+.sound-toggle-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    opacity: 0.7;
+    transition: var(--transition);
+}
+
+.sound-toggle-btn:hover {
+    opacity: 1;
+    color: var(--text-primary);
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width: 900px) {
+    .header h1 {
+        font-size: 40px;
+    }
+}
+
+@media(max-width: 600px) {
+    .workout-container,
+    .timer-section {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .timer-card h1 {
+        font-size: 58px;
+    }
+    .timer-buttons button {
+        padding: 12px 20px;
+        font-size: 14px;
+        margin: 5px;
+    }
+}

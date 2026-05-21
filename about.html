@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About — FitZone Premium</title>
+    <meta name="description"
+        content="Meet the team of 4 developers who built FitZone Premium — the ultimate gym companion platform.">
+
+    <!-- Global Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- About Page Styles -->
+    <link rel="stylesheet" href="css/about.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+
+    <!-- ===== Dynamic Background Glows (matches site wide style) ===== -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar">
+        <div class="logo">
+            <i class="ph-fill ph-barbell"></i>
+            FitZone
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html"><i class="ph ph-house"></i> Home</a></li>
+            <li><a href="dashboard.html"><i class="ph ph-squares-four"></i> Dashboard</a></li>
+            <li><a href="workouts.html"><i class="ph ph-activity"></i> Workouts</a></li>
+            <li><a href="diet.html"><i class="ph ph-apple"></i> Diet</a></li>
+            <li><a href="contact.html"><i class="ph ph-envelope"></i> Contact</a></li>
+            <li><a href="about.html" class="active"><i class="ph ph-users"></i> About</a></li>
+        </ul>
+        <div class="nav-buttons">
+            <a class="login-btn" href="login.html" id="navLoginBtn">Login</a>
+            <a class="signup-btn" href="signup.html" id="navSignupBtn">Sign Up</a>
+            <button class="logout-btn" id="navLogoutBtn" style="display:none">Logout</button>
+        </div>
+        <!-- Mobile hamburger -->
+        <div class="menu-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation">
+            <i class="ph ph-list"></i>
+        </div>
+    </nav>
+
+    <!-- ===== PAGE HEADER ===== -->
+    <section class="about-hero slide-up">
+        <div class="about-hero-badge">
+            <i class="ph-fill ph-users"></i> The Team
+        </div>
+        <h1 class="about-hero-title">
+            Built with <span class="about-accent">Passion</span>,<br>
+        </h1>
+        <p class="about-hero-sub">
+            We are 4 students who came together to build FitZone Premium — a full-stack fitness platform
+            designed to help athletes train smarter and live better.
+        </p>
+    </section>
+
+    <!-- ===== TEAM SECTION ===== -->
+    <section class="team-section">
+
+        <!-- ── Card 1: Narasimha Reddy ── -->
+        <article class="team-card glass-panel scale-in delay-100">
+            <!-- Avatar placeholder (replace src with real photo path when ready) -->
+            <div class="team-photo-wrap">
+                <img class="team-photo" src="images/Narasimha.png" alt="Photo of Narasimha"
+                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+                <!-- Fallback avatar shown when image is missing -->
+                <div class="team-photo-fallback" style="display:none">BN</div>
+            </div>
+
+            <div class="team-info">
+                <h3 class="team-name">Narasimha Reddy </h3>
+                <span class="team-role-badge">
+                    <i class="ph ph-code"></i> Developer
+                </span>
+                <p class="team-bio">
+                    Crafting seamless user experiences and robust logic that powers FitZone's core features.
+                </p>
+            </div>
+
+            <!-- Social links -->
+            <div class="team-socials">
+                <a href="https://github.com/narasimhabusireddy018/PORTFOLIO-" target="_blank" rel="noopener"
+                    class="social-btn" aria-label="narasimha GitHub">
+                    <i class="ph-fill ph-github-logo"></i> GitHub
+                </a>
+                <a href="https://www.instagram.com/cruel_king_18/" target="_blank" rel="noopener" class="social-btn"
+                    aria-label="narasimha Instagram">
+                    <i class="ph-fill ph-instagram-logo"></i> Instagram
+                </a>
+                <a href="https://narasimhabusireddy018.github.io/PORTFOLIO-/" target="_blank" rel="noopener"
+                    class="social-btn social-btn--primary" aria-label="narasimha Portfolio">
+                    <i class="ph ph-arrow-square-out"></i> Portfolio
+                </a>
+            </div>
+        </article>
+
+        <!-- ── Card 2: Chethan ── -->
+        <article class="team-card glass-panel scale-in delay-200">
+            <div class="team-photo-wrap">
+                <img class="team-photo" src="images/chethan.png" alt="Photo of chethan"
+                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+                <div class="team-photo-fallback" style="display:none">BS</div>
+            </div>
+
+            <div class="team-info">
+                <h3 class="team-name">Chethan</h3>
+                <span class="team-role-badge">
+                    <i class="ph ph-code"></i> Developer
+                </span>
+                <p class="team-bio">
+                    I'm a frontend developer and a content creator. I help people learn things through my youtube
+                    channel and also work on innovative projects.
+                </p>
+            </div>
+
+            <div class="team-socials">
+                <a href="https://github.com/1Minku/My_portfolioS" target="_blank" rel="noopener" class="social-btn"
+                    aria-label="Chethan GitHub">
+                    <i class="ph-fill ph-github-logo"></i> GitHub
+                </a>
+                <a href="https://instagram.com/" target="_blank" rel="noopener" class="social-btn"
+                    aria-label="Chethan Instagram">
+                    <i class="ph-fill ph-instagram-logo"></i> Instagram
+                </a>
+                <a href="https://1minku.github.io/My_portfolio/" target="_blank" rel="noopener"
+                    class="social-btn social-btn--primary" aria-label="Chethan Portfolio">
+                    <i class="ph ph-arrow-square-out"></i> Portfolio
+                </a>
+            </div>
+        </article>
+
+        <!-- ── Card 3: Vasanth ── -->
+        <article class="team-card glass-panel scale-in delay-300">
+            <div class="team-photo-wrap">
+                <img class="team-photo" src="images/vasanth.png" alt="Photo of Vasanth"
+                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+                <div class="team-photo-fallback" style="display:none">VS</div>
+            </div>
+
+            <div class="team-info">
+                <h3 class="team-name">Vasanth</h3>
+                <span class="team-role-badge">
+                    <i class="ph ph-code"></i> Developer
+                </span>
+                <p class="team-bio">
+                    Focused on performance, animations, and visual polish that make FitZone feel premium.
+                </p>
+            </div>
+
+            <div class="team-socials">
+                <a href="https://github.com/vasanth-Gk/portfolio" target="_blank" rel="noopener" class="social-btn"
+                    aria-label="Vasanth GitHub">
+                    <i class="ph-fill ph-github-logo"></i> GitHub
+                </a>
+                <a href="https://instagram.com/" target="_blank" rel="noopener" class="social-btn"
+                    aria-label="Vasanth Instagram">
+                    <i class="ph-fill ph-instagram-logo"></i> Instagram
+                </a>
+                <a href="https://vasanth-gk.github.io/portfolio/" target="_blank" rel="noopener"
+                    class="social-btn social-btn--primary" aria-label="Vasanth Portfolio">
+                    <i class="ph ph-arrow-square-out"></i> Portfolio
+                </a>
+            </div>
+        </article>
+
+        <!-- ── Card 4: Manikanta ── -->
+        <article class="team-card glass-panel scale-in delay-400">
+            <div class="team-photo-wrap">
+                <img class="team-photo" src="images/manikanta.png" alt="Photo of manikanta"
+                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+                <div class="team-photo-fallback" style="display:none">MK</div>
+            </div>
+
+            <div class="team-info">
+                <h3 class="team-name">Manikanta</h3>
+                <span class="team-role-badge">
+                    <i class="ph ph-code"></i> Developer
+                </span>
+                <p class="team-bio">
+                    Architecting the FitZone ecosystem — from the mock database to the cinematic login experience.
+                </p>
+            </div>
+
+            <div class="team-socials">
+                <!-- TODO: Add your real GitHub & Instagram links -->
+                <a href="https://github.com/palaganimanikanta9-spec/portfolio" target="_blank" rel="noopener"
+                    class="social-btn" aria-label="Manikanta GitHub">
+                    <i class="ph-fill ph-github-logo"></i> GitHub
+                </a>
+                <a href="https://instagram.com/" target="_blank" rel="noopener" class="social-btn"
+                    aria-label="Manikanta Instagram">
+                    <i class="ph-fill ph-instagram-logo"></i> Instagram
+                </a>
+                <!-- TODO: Add your portfolio link below -->
+                <a href="https://palaganimanikanta9-spec.github.io/portfolio/" target="_blank" rel="noopener"
+                    class="social-btn social-btn--primary" aria-label="Manikanta Portfolio">
+                    <i class="ph ph-arrow-square-out"></i> Portfolio
+                </a>
+            </div>
+        </article>
+
+    </section>
+
+    <!-- ===== PROJECT CALLOUT ===== -->
+    <section class="about-project slide-up">
+        <div class="project-callout glass-panel">
+            <i class="ph-fill ph-code-block about-project-icon"></i>
+            <div>
+                <h2>Open Source Spirit</h2>
+                <p>FitZone Premium is a student project built with pure HTML, CSS &amp; JavaScript — no frameworks, no
+                    shortcuts. Just clean code and real passion.</p>
+            </div>
+            <a href="index.html" class="cta-btn" style="min-width: 170px; text-align:center">
+                Try FitZone <i class="ph-fill ph-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p>&copy; 2026 FitZone Premium. Built with ❤️ by 4 students.</p>
+    </footer>
+
+    <!-- ===== TOAST CONTAINER ===== -->
+    <div id="toastContainer" class="toast-container"></div>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="js/db.js"></script>
+    <script src="js/global.js"></script>
+
+</body>
+
+</html>

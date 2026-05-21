@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>FitZone Premium</title>
+
+    <link rel="stylesheet" href="css/style.css"/>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+    <!-- Dynamic Glow Background -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <i class="ph-fill ph-barbell"></i>
+            FitZone
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html" class="active"><i class="ph ph-house"></i> Home</a></li>
+            <li><a href="dashboard.html"><i class="ph ph-squares-four"></i> Dashboard</a></li>
+            <li><a href="workouts.html"><i class="ph ph-activity"></i> Workouts</a></li>
+            <li><a href="diet.html"><i class="ph ph-apple"></i> Diet</a></li>
+            <li><a href="contact.html"><i class="ph ph-envelope"></i> Contact</a></li>
+            <li><a href="about.html"><i class="ph ph-users"></i> About</a></li>
+        </ul>
+
+        <div class="nav-buttons">
+            <a class="login-btn" href="login.html">Login</a>
+            <a class="signup-btn" href="signup.html">Sign Up <i class="ph ph-arrow-right"></i></a>
+        </div>
+
+        <div class="menu-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation">
+            <i class="ph ph-list"></i>
+        </div>
+
+    </nav>
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <section class="hero">
+
+        <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2070" class="hero-img" alt="Gym Background" loading="lazy">
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content fade-in">
+
+            <h1>
+                Build Strength.<br>
+                Track Progress.<br>
+                Stay Consistent.
+            </h1>
+
+            <p>
+                Experience the next generation of fitness tracking. Your ultimate partner for tailored workouts, intelligent diet planning, and visual progress tracking.
+            </p>
+
+            <div class="hero-buttons">
+                <a class="primary-btn" href="signup.html">
+                    Start Your Journey <i class="ph-fill ph-rocket-launch"></i>
+                </a>
+
+                <a class="secondary-btn" href="workouts.html">
+                    Explore Workouts <i class="ph ph-magnifying-glass"></i>
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= STATS SECTION ================= -->
+
+    <section class="stats">
+
+        <div class="stat-card glass-panel scale-in delay-100">
+            <i class="ph-fill ph-users stat-icon"></i>
+            <h2 id="members">0+</h2>
+            <p>Active Members</p>
+        </div>
+
+        <div class="stat-card glass-panel scale-in delay-200">
+            <i class="ph-fill ph-barbell stat-icon"></i>
+            <h2 id="workouts">0+</h2>
+            <p>Workouts Completed</p>
+        </div>
+
+        <div class="stat-card glass-panel scale-in delay-300">
+            <i class="ph-fill ph-fire stat-icon"></i>
+            <h2 id="calories">0+</h2>
+            <p>Calories Burned</p>
+        </div>
+
+    </section>
+
+    <!-- ================= FEATURES SECTION ================= -->
+
+    <section class="features" id="features">
+
+        <div class="section-header slide-up">
+            <h2 class="section-title">
+                Premium Features
+            </h2>
+            <p class="section-subtitle">Everything you need to transform your body, designed beautifully.</p>
+        </div>
+
+        <div class="feature-container">
+
+            <div class="feature-card glass-panel slide-up delay-100">
+                <i class="ph-fill ph-notebook feature-icon"></i>
+                <h3>Workout Planner</h3>
+                <p>Create and customize personalized workout routines tailored to your specific goals and schedule.</p>
+            </div>
+
+            <div class="feature-card glass-panel slide-up delay-200">
+                <i class="ph-fill ph-apple-podcasts feature-icon"></i>
+                <h3>Diet Planner</h3>
+                <p>Get intelligent, dynamic meal suggestions daily to ensure your nutrition matches your training intensity.</p>
+            </div>
+
+            <div class="feature-card glass-panel slide-up delay-300">
+                <i class="ph-fill ph-chart-line-up feature-icon"></i>
+                <h3>Progress Tracking</h3>
+                <p>Visualize your fitness journey with beautiful charts and data insights to stay highly motivated.</p>
+            </div>
+
+            <div class="feature-card glass-panel slide-up delay-400">
+                <i class="ph-fill ph-timer feature-icon"></i>
+                <h3>Workout Timer</h3>
+                <p>Use built-in precision countdown timers to optimize your rest periods and training intervals.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= CTA SECTION ================= -->
+
+    <section class="cta">
+
+        <div class="cta-box glass-panel scale-in">
+            <h2>Ready to transform yourself?</h2>
+            <p>Join thousands of active members who have already achieved their dream physics with FitZone Premium.</p>
+
+            <a class="cta-btn" href="signup.html">
+                Join FitZone Now <i class="ph-fill ph-arrow-circle-right"></i>
+            </a>
+        </div>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            &copy; 2026 FitZone Premium. Designed for Excellence.
+        </p>
+
+    </footer>
+
+    <script src="js/db.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/global.js"></script>
+
+</body>
+</html>

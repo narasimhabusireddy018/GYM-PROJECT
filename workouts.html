@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workouts - FitZone</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/workout.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+</head>
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+        <div class="logo">
+            <i class="ph-fill ph-barbell"></i> FitZone
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html"><i class="ph ph-house"></i> Home</a></li>
+            <li><a href="dashboard.html"><i class="ph ph-squares-four"></i> Dashboard</a></li>
+            <li><a href="workouts.html" class="active"><i class="ph ph-activity"></i> Workouts</a></li>
+            <li><a href="diet.html"><i class="ph ph-apple"></i> Diet</a></li>
+            <li><a href="contact.html"><i class="ph ph-envelope"></i> Contact</a></li>
+            <li><a href="about.html"><i class="ph ph-users"></i> About</a></li>
+        </ul>
+        <div class="menu-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation">
+            <i class="ph ph-list"></i>
+        </div>
+    </nav>
+
+    <!-- ================= HEADER ================= -->
+
+    <section class="header slide-up">
+
+        <h1>
+            Workout Programs
+        </h1>
+
+        <p>
+            Choose your workout category and stay consistent.
+        </p>
+
+    </section>
+
+    <!-- ================= CATEGORY BUTTONS ================= -->
+
+    <section class="categories slide-up delay-100">
+
+        <button class="category-btn active" data-category="all">
+            All
+        </button>
+
+        <button class="category-btn" data-category="chest">
+            Chest
+        </button>
+
+        <button class="category-btn" data-category="back">
+            Back
+        </button>
+
+        <button class="category-btn" data-category="legs">
+            Legs
+        </button>
+
+        <button class="category-btn" data-category="cardio">
+            Cardio
+        </button>
+
+    </section>
+
+    <!-- ================= WORKOUT CARDS ================= -->
+
+    <section class="workout-container scale-in delay-200" id="workoutContainer">
+
+        <!-- JS WILL ADD CARDS -->
+
+    </section>
+
+    <!-- ================= TIMER SECTION ================= -->
+
+    <section class="timer-section slide-up delay-300">
+
+        <div class="timer-card glass-panel">
+
+            <h2>Workout Timer</h2>
+
+            <!-- Presets -->
+            <div class="timer-presets">
+                <button class="preset-btn active" data-seconds="30">30s Standard</button>
+                <button class="preset-btn" data-seconds="60">1 Min</button>
+                <button class="preset-btn" data-mode="tabata">Tabata (20s/10s)</button>
+                <button class="preset-btn" data-mode="hiit">HIIT (40s/20s)</button>
+            </div>
+
+            <!-- Radial Display -->
+            <div class="timer-display-wrapper">
+                <svg class="timer-svg" width="220" height="220">
+                    <circle class="timer-circle-bg" stroke="rgba(255,255,255,0.05)" stroke-width="8" fill="transparent" r="95" cx="110" cy="110"/>
+                    <circle class="timer-circle-progress" id="timerCircle" stroke="var(--accent-vibrant-2)" stroke-width="8" stroke-dasharray="597" stroke-dashoffset="0" stroke-linecap="round" fill="transparent" r="95" cx="110" cy="110"/>
+                </svg>
+                <div class="timer-text-container">
+                    <span id="timerPhase" class="timer-phase">READY</span>
+                    <h1 id="timer">00:30</h1>
+                    <div class="timer-adjust">
+                        <button id="timerMinus" aria-label="Decrease Time"><i class="ph ph-minus"></i></button>
+                        <button id="timerPlus" aria-label="Increase Time"><i class="ph ph-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <div class="timer-buttons">
+                <button id="startBtn" class="timer-ctrl-btn primary"><i class="ph-fill ph-play"></i> Start</button>
+                <button id="pauseBtn" class="timer-ctrl-btn"><i class="ph-fill ph-pause"></i> Pause</button>
+                <button id="resetBtn" class="timer-ctrl-btn"><i class="ph ph-arrow-counter-clockwise"></i> Reset</button>
+            </div>
+
+            <!-- Sound Toggle -->
+            <div class="timer-sound-toggle">
+                <button id="soundToggle" class="sound-toggle-btn">
+                    <i class="ph-fill ph-speaker-high"></i> Sound On
+                </button>
+            </div>
+
+        </div>
+
+    </section>
+
+    <script src="js/db.js"></script>
+    <script src="js/workout.js"></script>
+    <script src="js/global.js"></script>
+
+</body>
+</html>

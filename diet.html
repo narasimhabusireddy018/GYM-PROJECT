@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet Planner - FitZone Premium</title>
+    <link rel="stylesheet" href="css/diet.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+    <!-- Dynamic Glow Background -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar">
+        <div class="logo">
+            <i class="ph-fill ph-barbell"></i> FitZone
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html"><i class="ph ph-house"></i> Home</a></li>
+            <li><a href="dashboard.html"><i class="ph ph-squares-four"></i> Dashboard</a></li>
+            <li><a href="workouts.html"><i class="ph ph-activity"></i> Workouts</a></li>
+            <li><a href="diet.html" class="active"><i class="ph ph-apple"></i> Diet</a></li>
+            <li><a href="contact.html"><i class="ph ph-envelope"></i> Contact</a></li>
+            <li><a href="about.html"><i class="ph ph-users"></i> About</a></li>
+        </ul>
+        <div class="menu-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation">
+            <i class="ph ph-list"></i>
+        </div>
+    </nav>
+
+    <!-- ================= HEADER ================= -->
+    <section class="header slide-up">
+        <h1>Smart Diet Planner <i class="ph-fill ph-sparkle" style="color: var(--accent-vibrant-2);"></i></h1>
+        <p>Get your highly personalized nutrition plan.</p>
+    </section>
+
+    <!-- ================= DIET FORM ================= -->
+    <section class="diet-section">
+        <div class="diet-card glass-panel scale-in delay-100">
+            <h2><i class="ph ph-sliders"></i> Enter Your Details</h2>
+
+            <div class="input-group">
+                <div class="input-wrapper">
+                    <input type="number" id="weight" placeholder="Weight (kg)">
+                    <i class="ph ph-scales"></i>
+                </div>
+                <div class="input-wrapper">
+                    <input type="number" id="height" placeholder="Height (cm)">
+                    <i class="ph ph-ruler"></i>
+                </div>
+            </div>
+
+            <div class="input-wrapper" style="margin-bottom: 20px;">
+                <select id="goal">
+                    <option value="" disabled selected>Select Fitness Goal</option>
+                    <option value="lose">Weight Loss / Cutting</option>
+                    <option value="gain">Muscle Gain / Bulking</option>
+                    <option value="maintain">Maintain Weight / Recomp</option>
+                </select>
+            </div>
+
+            <button id="generateBtn">
+                <i class="ph-fill ph-calculator"></i> Calculate My Plan
+                <i class="ph ph-spinner spinner"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- ================= RESULTS WRAPPER ================= -->
+    <div class="results-wrapper" id="resultsWrapper">
+
+        <!-- ================= RESULTS GRID ================= -->
+        <section class="results-section">
+            <div class="results-grid">
+                
+                <div class="result-card glass-panel bmi">
+                    <i class="ph-fill ph-activity result-icon"></i>
+                    <h3>BMI Result</h3>
+                    <p id="bmiResult">0.0</p>
+                </div>
+
+                <div class="result-card glass-panel calories">
+                    <i class="ph-fill ph-fire result-icon"></i>
+                    <h3>Daily Calories</h3>
+                    <p id="calorieResult">0 <span style="font-size:16px; color:var(--text-secondary);">kcal</span></p>
+                </div>
+
+                <div class="result-card glass-panel water">
+                    <i class="ph-fill ph-drop result-icon"></i>
+                    <h3>Water Intake</h3>
+                    <p id="waterResult">0.0 <span style="font-size:16px; color:var(--text-secondary);">L</span></p>
+                </div>
+
+                <div class="result-card glass-panel protein">
+                    <i class="ph-fill ph-barbell result-icon"></i>
+                    <h3>Protein Target</h3>
+                    <p id="proteinResult">0 <span style="font-size:16px; color:var(--text-secondary);">g</span></p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================= RECOMMENDATION ================= -->
+        <section class="expert-section">
+            <div class="expert-card glass-panel">
+                <h2><i class="ph-fill ph-clipboard-text"></i> Expert Recommendation</h2>
+                <p id="expertRecommendation">Your tailored recommendation will appear here.</p>
+            </div>
+        </section>
+
+        <!-- ================= MEAL PLAN ================= -->
+        <section class="meal-section">
+            <div class="meal-card glass-panel">
+                <h2><i class="ph-fill ph-fork-knife"></i> Suggested Meal Plan</h2>
+                <ul id="mealPlan">
+                    <!-- JS fills this -->
+                </ul>
+            </div>
+        </section>
+
+    </div> <!-- End results wrapper -->
+
+    <script src="js/db.js"></script>
+    <script src="js/diet.js"></script>
+    <script src="js/global.js"></script>
+</body>
+</html>

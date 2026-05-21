@@ -1,0 +1,336 @@
+/* ===================================================
+   FITZONE PREMIUM — ABOUT PAGE STYLES (about.css)
+   Team cards, hero header, project callout section.
+   Inherits CSS variables & utilities from style.css
+   =================================================== */
+
+/* ──────────────────────────────────────────────────
+   ABOUT HERO HEADER
+   A full-width cinematic intro section at the top
+────────────────────────────────────────────────── */
+.about-hero {
+    max-width: 800px;
+    margin: 120px auto 0;        /* clears the fixed navbar */
+    padding: 0 2rem 3rem;
+    text-align: center;
+}
+
+/* Pill badge: "The Team" */
+.about-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 18px;
+    border-radius: var(--radius-full, 999px);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    letter-spacing: 0.5px;
+    margin-bottom: 1.5rem;
+    backdrop-filter: blur(8px);
+}
+
+/* Main heading */
+.about-hero-title {
+    font-size: clamp(36px, 5vw, 64px);
+    font-weight: 800;
+    color: var(--text-primary);
+    line-height: 1.15;
+    letter-spacing: -1px;
+    margin-bottom: 1.25rem;
+}
+
+/* Gradient accent word "Passion" */
+.about-accent {
+    background: linear-gradient(135deg, #ffffff 20%, #94A3B8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Subtitle paragraph under heading */
+.about-hero-sub {
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ──────────────────────────────────────────────────
+   TEAM GRID — 4 cards, 2 columns on desktop,
+   1 column on mobile
+────────────────────────────────────────────────── */
+.team-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);   /* 2 per row for 4 members */
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto 4rem;
+    padding: 0 2rem;
+    align-items: stretch;
+}
+
+/* ── Individual Team Card ── */
+.team-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 2.25rem 2rem 2rem;
+    border-radius: var(--radius-lg);
+    text-align: center;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle top-border glow on hover */
+.team-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 15%;
+    right: 15%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.team-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6), 0 0 30px rgba(255,255,255,0.04);
+}
+
+.team-card:hover::before {
+    opacity: 1;
+}
+
+/* ── Photo Container ── */
+.team-photo-wrap {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.5), 0 0 0 6px rgba(255,255,255,0.03);
+    flex-shrink: 0;
+    transition: var(--transition);
+}
+
+.team-card:hover .team-photo-wrap {
+    border-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.6), 0 0 0 8px rgba(255,255,255,0.05);
+}
+
+/* Actual photo */
+.team-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Fallback initial avatar (shown when image is missing) */
+.team-photo-fallback {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(40,40,40,0.9), rgba(15,15,15,0.9));
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: 1px;
+}
+
+/* ── Info Block ── */
+.team-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Member name */
+.team-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+    letter-spacing: 0.3px;
+}
+
+/* Role pill badge */
+.team-role-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 14px;
+    border-radius: var(--radius-full, 999px);
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.08);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    letter-spacing: 0.3px;
+}
+
+/* Short bio text */
+.team-bio {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.65;
+    max-width: 280px;
+    margin: 0 auto;
+}
+
+/* ── Social Buttons Row ── */
+.team-socials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-top: auto;           /* pins socials to card bottom */
+    padding-top: 0.5rem;
+}
+
+/* Base social button */
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 8px 16px;
+    border-radius: var(--radius-sm);
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    color: var(--text-secondary);
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.social-btn:hover {
+    background: rgba(255,255,255,0.1);
+    color: var(--text-primary);
+    border-color: rgba(255,255,255,0.18);
+    transform: translateY(-2px);
+}
+
+/* Primary accent button (Portfolio) */
+.social-btn--primary {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(255,255,255,0.15);
+    color: var(--text-primary);
+}
+
+.social-btn--primary:hover {
+    background: var(--text-primary);
+    color: var(--bg-base);
+    border-color: var(--text-primary);
+    box-shadow: 0 6px 20px rgba(255,255,255,0.15);
+}
+
+/* ──────────────────────────────────────────────────
+   PROJECT CALLOUT BANNER at the bottom
+────────────────────────────────────────────────── */
+.about-project {
+    max-width: 1100px;
+    margin: 0 auto 5rem;
+    padding: 0 2rem;
+}
+
+.project-callout {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 2.5rem;
+    border-radius: var(--radius-lg);
+    flex-wrap: wrap;
+}
+
+/* Big icon on the left */
+.about-project-icon {
+    font-size: 48px;
+    color: var(--text-secondary);
+    flex-shrink: 0;
+    opacity: 0.7;
+}
+
+/* Text block */
+.project-callout div {
+    flex: 1;
+    min-width: 200px;
+}
+
+.project-callout h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+}
+
+.project-callout p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.65;
+}
+
+/* Reuse site-wide CTA button from style.css */
+.about-project .cta-btn {
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* ──────────────────────────────────────────────────
+   RESPONSIVE BREAKPOINTS
+────────────────────────────────────────────────── */
+
+/* Tablet — switch to 1-column team grid */
+@media (max-width: 768px) {
+    .team-section {
+        grid-template-columns: 1fr;
+        padding: 0 1.25rem;
+    }
+
+    .about-hero {
+        margin-top: 90px;
+        padding: 0 1.25rem 2rem;
+    }
+
+    .project-callout {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.25rem;
+        padding: 1.75rem 1.5rem;
+    }
+
+    .project-callout .cta-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+    .team-card {
+        padding: 1.75rem 1.25rem;
+    }
+
+    .team-photo-wrap {
+        width: 110px;
+        height: 110px;
+    }
+
+    .team-name {
+        font-size: 18px;
+    }
+}
